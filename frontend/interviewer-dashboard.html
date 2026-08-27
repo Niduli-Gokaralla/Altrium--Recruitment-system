@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interviewer Dashboard - Altrium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/interviews.css">
+<link rel="stylesheet" href="css/hm-shared.css">
+</head>
+<body class="dashboard-body">
+
+<div class="dashboard-shell">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <svg viewBox="0 0 100 110" width="34" height="38" xmlns="http://www.w3.org/2000/svg" aria-label="Altrium logo">
+        <polygon points="50,4 93,27 93,73 50,96 7,73 7,27"
+                 fill="#f6b93b" stroke="#f6b93b" stroke-width="2" stroke-linejoin="round"/>
+        <polygon points="50,32 68,68 32,68" fill="none" stroke="#ffffff" stroke-width="7" stroke-linejoin="round"/>
+        <circle cx="72" cy="18" r="5" fill="#f6b93b"/>
+      </svg>
+      <span class="sidebar-logo-text">altrium</span>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="active"><a href="interviewer-dashboard.html"><i class="bi bi-grid"></i> Dashboard</a></li>
+      <li><a href="int-interviews.html"><i class="bi bi-calendar-event"></i> My Interviews</a></li>
+      <li><a href="int-candidates.html"><i class="bi bi-people"></i> My Candidates</a></li>
+      <li><a href="int-criteria.html"><i class="bi bi-clipboard-check"></i> Evaluation Criteria</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="avatar" id="sidebarAvatar">I</div>
+        <div>
+          <div class="sidebar-username" id="sidebarUsername">interviewer_test</div>
+          <div class="sidebar-role">Interviewer</div>
+        </div>
+      </div>
+      <button id="logoutBtn" class="btn btn-sm btn-outline-light w-100 mt-3">Log out</button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div id="guardMessage" class="alert alert-warning d-none" role="alert"></div>
+
+    <div id="dashboardContent" class="d-none">
+
+      <div class="mb-4">
+        <h3 class="welcome-heading mb-1">Welcome, <span id="welcomeName">Interviewer</span>! 👋</h3>
+        <p class="text-muted mb-0">Here's an overview of your interview assignments.</p>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-xl-4 col-md-6">
+          <div class="card shadow-sm border-0 stat-card">
+            <div class="card-body p-4">
+              <div class="stat-label"><i class="bi bi-calendar-event"></i> Assigned Interviews</div>
+              <div class="stat-value" id="kpiInterviews">–</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="card shadow-sm border-0 stat-card">
+            <div class="card-body p-4">
+              <div class="stat-label"><i class="bi bi-people"></i> Candidates</div>
+              <div class="stat-value" id="kpiCandidates">–</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="card shadow-sm border-0 stat-card">
+            <div class="card-body p-4">
+              <div class="stat-label"><i class="bi bi-hourglass-split"></i> Pending Feedback</div>
+              <div class="stat-value" id="kpiPending">–</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card shadow-sm border-0 interviews-card h-100">
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold mb-3">Upcoming Interviews</h5>
+              <div id="upcomingEmpty" class="text-white-50 small">No upcoming interviews scheduled.</div>
+              <ul id="upcomingList" class="list-unstyled mb-0"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold mb-3"><i class="bi bi-exclamation-triangle text-warning"></i> Awaiting Your Feedback</h5>
+              <div id="pendingEmpty" class="text-muted small">Nothing needs feedback right now.</div>
+              <ul id="pendingList" class="list-unstyled mb-0"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/int-common.js"></script>
+<script src="js/int-dashboard.js"></script>
+</body>
+</html>
