@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../images/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evaluation Criteria - Altrium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/hm-shared.css">
+</head>
+<body class="dashboard-body">
+
+<div class="dashboard-shell">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../images/logo.png" alt="Altrium logo" width="34" height="38">
+      <span class="sidebar-logo-text">altrium</span>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class=""><a href="hiring-manager-dashboard.html"><i class="bi bi-grid"></i> Dashboard</a></li>
+      <li class=""><a href="hm-my-jobs.html"><i class="bi bi-briefcase"></i> My Job Openings</a></li>
+      <li class=""><a href="hm-candidates.html"><i class="bi bi-people"></i> Candidates</a></li>
+      <li class=""><a href="hm-interviews.html"><i class="bi bi-calendar-event"></i> Interviews</a></li>
+      <li class=""><a href="hm-feedback.html"><i class="bi bi-chat-square-text"></i> Feedback &amp; Decisions</a></li>
+      <li class="active"><a href="hm-criteria.html"><i class="bi bi-clipboard-check"></i> Evaluation Criteria</a></li>
+      <li class=""><a href="hm-ranking.html"><i class="bi bi-bar-chart-line"></i> Candidate Ranking</a></li>
+      <li class=""><a href="hm-reports.html"><i class="bi bi-graph-up"></i> Reports</a></li>
+    </ul>
+
+    
+  </aside>
+
+  <main class="main-content">
+    <div id="guardMessage" class="alert alert-warning d-none" role="alert"></div>
+
+    <div id="pageContent" class="d-none">
+      <div class="mb-4">
+        <h3 class="welcome-heading mb-1">Standard Evaluation Criteria <span class="readonly-badge">Reference only</span></h3>
+        <p class="page-header-sub">Used consistently across all candidates and interview stages</p>
+      </div>
+
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+
+          <div class="criteria-card">
+            <h6>Technical Skills</h6>
+            <p>Depth of relevant technical knowledge and ability to apply it to real problems for the role.</p>
+            <div class="criteria-scale">
+              <span>1 – Poor</span><span>2 – Below Average</span><span>3 – Average</span><span>4 – Good</span><span>5 – Excellent</span>
+            </div>
+          </div>
+
+          <div class="criteria-card">
+            <h6>Communication</h6>
+            <p>Clarity of thought, ability to explain ideas, and listening/collaboration skills during the interview.</p>
+            <div class="criteria-scale">
+              <span>1 – Poor</span><span>2 – Below Average</span><span>3 – Average</span><span>4 – Good</span><span>5 – Excellent</span>
+            </div>
+          </div>
+
+          <div class="criteria-card">
+            <h6>Problem Solving</h6>
+            <p>Approach to breaking down problems, reasoning through trade-offs, and reaching workable solutions.</p>
+            <div class="criteria-scale">
+              <span>1 – Poor</span><span>2 – Below Average</span><span>3 – Average</span><span>4 – Good</span><span>5 – Excellent</span>
+            </div>
+          </div>
+
+          <div class="criteria-card">
+            <h6>Cultural Fit</h6>
+            <p>Alignment with team working style, values, and how the candidate is likely to collaborate day-to-day.</p>
+            <div class="criteria-scale">
+              <span>1 – Poor</span><span>2 – Below Average</span><span>3 – Average</span><span>4 – Good</span><span>5 – Excellent</span>
+            </div>
+          </div>
+
+          <div class="criteria-card">
+            <h6>Overall Recommendation</h6>
+            <p>The interviewer's overall assessment, weighing all criteria together for this candidate and stage.</p>
+            <div class="criteria-scale">
+              <span>1 – Poor</span><span>2 – Below Average</span><span>3 – Average</span><span>4 – Good</span><span>5 – Excellent</span>
+            </div>
+          </div>
+
+          <p class="text-muted small mb-0 mt-3">
+            <i class="bi bi-lock"></i> These criteria are fixed system-wide and consistent across every candidate and interview stage. They cannot be modified from this page.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/hm-common.js"></script>
+<script src="js/mobile-nav.js"></script>
+<script src="js/footer.js"></script> 
+<script src="js/topbar.js"></script>
+<script>
+if (guardHmAccess()) { /* static content, nothing to load */ }
+</script>
+</body>
+</html>

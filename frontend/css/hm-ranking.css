@@ -1,0 +1,122 @@
+/* Top 3 ranking cards */
+.top3-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border-top: 4px solid #f6b93b;
+}
+.top3-medal {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.top3-label {
+  font-size: 0.75rem;
+  color: #8a8a8a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+.top3-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #16324f;
+  margin-bottom: 8px;
+}
+.top3-score {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #16324f;
+}
+.top3-score span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #8a8a8a;
+}
+
+/* Score bars inside the ranking table */
+.score-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 90px;
+}
+.score-bar-track {
+  flex-grow: 1;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+.score-bar-num {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #16324f;
+  width: 22px;
+  text-align: right;
+}
+
+.incomplete-card-dark {
+  background: linear-gradient(160deg, #16324f, #0b2038);
+  border-radius: 14px;
+  padding: 24px;
+  color: #ffffff;
+}
+.incomplete-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.incomplete-row:last-child { border-bottom: none; }
+.incomplete-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f6b93b;
+  color: #16324f;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.incomplete-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+.incomplete-stage-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(246, 185, 59, 0.18);
+  color: #f6b93b;
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-top: 2px;
+}
+
+/* Stage-based ranking */
+.stage-summary-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border-left: 4px solid #f6b93b;
+}
+.stage-winner-row {
+  background: #fff8e8;
+}
+.stage-winner-row td {
+  font-weight: 600;
+}

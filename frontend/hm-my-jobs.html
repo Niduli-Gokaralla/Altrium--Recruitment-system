@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="../images/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Job Openings - Altrium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/job-openings.css">
+<link rel="stylesheet" href="css/hm-shared.css">
+</head>
+<body class="dashboard-body">
+
+<div class="dashboard-shell">
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../images/logo.png" alt="Altrium logo" width="34" height="38">
+      <span class="sidebar-logo-text">altrium</span>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class=""><a href="hiring-manager-dashboard.html"><i class="bi bi-grid"></i> Dashboard</a></li>
+      <li class="active"><a href="hm-my-jobs.html"><i class="bi bi-briefcase"></i> My Job Openings</a></li>
+      <li class=""><a href="hm-candidates.html"><i class="bi bi-people"></i> Candidates</a></li>
+      <li class=""><a href="hm-interviews.html"><i class="bi bi-calendar-event"></i> Interviews</a></li>
+      <li class=""><a href="hm-feedback.html"><i class="bi bi-chat-square-text"></i> Feedback &amp; Decisions</a></li>
+      <li class=""><a href="hm-criteria.html"><i class="bi bi-clipboard-check"></i> Evaluation Criteria</a></li>
+      <li class=""><a href="hm-ranking.html"><i class="bi bi-bar-chart-line"></i> Candidate Ranking</a></li>
+      <li class=""><a href="hm-reports.html"><i class="bi bi-graph-up"></i> Reports</a></li>
+    </ul>
+
+    
+  </aside>
+
+  <main class="main-content">
+    <div id="guardMessage" class="alert alert-warning d-none" role="alert"></div>
+
+    <div id="pageContent" class="d-none">
+      <div class="mb-4">
+        <h3 class="welcome-heading mb-1">My Job Openings <span class="readonly-badge">Assigned to you</span></h3>
+        <p class="page-header-sub">Positions you're responsible for hiring</p>
+      </div>
+
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+          <div id="jobsLoading" class="text-muted small">Loading your job openings...</div>
+          <div id="jobsEmpty" class="text-muted small d-none">No job openings are currently assigned to you. Ask HR to assign one from the Job Openings page.</div>
+          <div class="table-responsive">
+            <table class="table jobs-table align-middle d-none" id="jobsTable">
+              <thead>
+                <tr><th>Position</th><th>Department</th><th>Location</th><th>Vacancies</th><th>Status</th><th class="text-end">Details</th></tr>
+              </thead>
+              <tbody id="jobsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Job Details modal -->
+<div class="modal fade" id="jobDetailsModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="detailsTitle">Job Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="detailsBody"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/hm-common.js"></script>
+<script src="js/hm-my-jobs.js"></script>
+<script src="js/footer.js"></script> 
+<script src="js/topbar.js"></script>
+</body>
+</html>
